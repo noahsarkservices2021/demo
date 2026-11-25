@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Simple Website</title>
+    <meta name="description" content="Welcome to our website. Discover modern design and quality services.">
+    <meta name="theme-color" content="#183f6f">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #183f6f;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            font-size: 25px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* Banner */
+        .banner {
+            background:
+                linear-gradient(#0005, #0005),
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600')
+                center/cover no-repeat;
+
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .banner h1 {
+            font-size: 45px;
+            background: #0008;
+            padding: 20px 30px;
+            border-radius: 10px;
+        }
+
+        /* Content */
+        .container {
+            padding: 60px 50px;
+            text-align: center;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .container > h2 {
+            font-size: 32px;
+            color: #183f6f;
+            margin-bottom: 10px;
+        }
+
+        .container > p {
+            color: #666;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: white;
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px #0002;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card h3 {
+            padding: 15px;
+            color: #183f6f;
+        }
+
+        .card p {
+            padding: 0 15px 25px;
+            color: #666;
+        }
+
+        /* About section */
+        .about {
+            background: white;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #183f6f;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+        }
+
+        /* Contact section */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #183f6f;
+            margin-bottom: 15px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-top: 15px;
+            background: #183f6f;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .contact a:hover {
+            background: #245b99;
+        }
+
+        /* Footer */
+        footer {
+            background: #183f6f;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .banner {
+                min-height: 300px;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+                padding: 15px;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card img {
+                height: 230px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .banner h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>MY WEBSITE</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <h1>Welcome to Our Website</h1>
+    </section>
+
+    <!-- Services -->
+    <section class="container" id="services">
+
+        <h2>Our Services</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600"
+                    alt="Modern interior design"
+                >
+
+                <h3>Modern Design</h3>
+
+                <p>
+                    We provide modern and creative designs
+                    to make your website look beautiful.
+                </p>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600"
+                    alt="Quality interior work"
+                >
+
+                <h3>Quality Work</h3>
+
+                <p>
+                    We focus on quality, performance
+                    and customer satisfaction.
+                </p>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600"
+                    alt="Beautiful modern home"
+                >
+
+                <h3>Best Services</h3>
+
+                <p>
+                    We deliver reliable services
+                    according to your requirements.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Welcome to My Website. We are committed to providing
+            quality work, modern designs and excellent services.
+            Our goal is to create a great experience for every visitor.
+        </p>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Have a question? Get in touch with us today.</p>
+
+        <a href="mailto:hello@example.com">Email Us</a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Copyright &copy; 2026 My Website.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
